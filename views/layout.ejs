@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reminder App</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+        <div class="navbar">
+                <a href="/" class="btn blue white-text">Home</a>
+            <% if(isLoggedIn) { %>
+                <a href="/users"  class="btn blue white-text">See All Users</a>
+                <a href="/notifications/create"  class="btn blue white-text">Send Notification</a>
+                <a href="/users/create"  class="btn blue white-text">Create new User</a>          
+                <a href="/auth/logout" class="btn red white-text">Logout</a>
+                <a href="/">Welcome, <%= user && user.name %></a>  
+
+            <% } else {%>
+                <a href="/auth/login"  class="btn green white-text">Login</a>            
+                <a href="/auth/register"  class="btn green white-text">Register</a>            
+
+                <% } %>
+            </div>
+    <%- body %>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

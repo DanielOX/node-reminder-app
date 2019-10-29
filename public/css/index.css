@@ -1,0 +1,40 @@
+@font-face{
+    font-family: "liquidFont";
+    src: 
+        local("/fonts/Liquidism2.TTF") 
+        local("/fonts/Liquidism.ttf")
+}
+body {
+    height:90vh;
+    background-size:cover;
+}
+.index-header-grid{
+    display: flex;
+    justify-content: center;
+    margin-top:5%;
+    align-items: center;
+    width:100%;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar a {
+    margin:12px;
+}
+.index-header-grid h1 {
+    font-family: "liquidFont";
+    font-weight: 1000;
+    font-stretch: extra-expanded;
+    font-size:128px;
+    background-image: url('/images/patterns.jpeg');
+    background-size:cover;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.index-header-grid div h1,p  {
+    text-align: center;
+
+}
